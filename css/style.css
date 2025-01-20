@@ -4,26 +4,36 @@ html {
 
 body {
   background: url(../images/easy-back.svg);
+  text-align: center;
 }
 
 h2 {
   margin: 0;
+  border: 2px solid gray;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* .general {
-    display: flex;
-    flex-direction: row-reverse;
-} */
+.general {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10%;
+  
+  }
 
 .mainImage {
+  margin-top: 10%;
   position: relative;
   text-align: center;
   height: 31rem;
-  width: 45rem;
+    width: 45rem;
   display: inline-block;
   align-items: center;
   background-color: aqua;
   border: 2px solid gray;
+  margin-right: auto;
+    margin-left: auto;
 
 }
 
@@ -31,7 +41,7 @@ h2 {
   margin-top: 7px;
   height: 93%;
   width: 98%;
-  /* clip-path: clip-path polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); */
+  
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
@@ -42,9 +52,13 @@ h2 {
 }
 
 .gallery {
+  
   list-style: none;
   max-height: 65vh;
   overflow: auto;
+  margin-top: 3%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .gallery--item_title {
@@ -93,6 +107,7 @@ h2 {
 }
 
 
+
 @media screen and (orientation: portrait) {
   .mainImage {
     display: flex;
@@ -125,16 +140,25 @@ h2 {
   .gallery--item:hover {
     filter: blur(5px);
   }
+.general {
+
+
+  display: flex;
+  flex-direction: column;
+}
 }
 
 @media screen and(orientation: landscape) {
-
   .mainImage {
     display: flex;
-    flex-direction: column-reverse;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    flex-direction: row;
+    
+    }
+    
+    .detailed-title {
+      display: inline-block;
+      width: auto;
+    }
 }
 
   
