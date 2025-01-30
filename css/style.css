@@ -12,8 +12,8 @@ h2 {
   margin: 0;
   border: 2px solid gray;
   width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .general {
@@ -41,15 +41,15 @@ h2 {
   border: 2px solid gray;
   align-items: center;
   top: 0;
-    right: 0;
+  right: 0;
 }
 
 .dImage {
   margin-top: auto;
-    margin-bottom: auto;
-    height: 90%;
-    width: 90%;
-    object-fit: cover;
+  margin-bottom: auto;
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
@@ -66,14 +66,14 @@ h2 {
   overflow: auto;
   margin-top: 3%;
   margin-right: auto;
-    margin-left: auto;
-    justify-content: space-around;
+  margin-left: auto;
+  justify-content: space-around;
 }
 
 .gallery--item_title {
   font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-style: normal;
+  font-weight: 600;
+  font-style: normal;
   display: block;
   width: 15rem;
   font-size: 2rem;
@@ -99,10 +99,10 @@ h2 {
 
 .logo {
   font-family: 'lakeshore_brkregular';
-    letter-spacing: 1.5rem;
-    font-size: 3.5rem;
-    font-weight: bold;
-    font-style: normal;
+  letter-spacing: 1.5rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-style: normal;
   text-align: center;
   background-color: azure;
 }
@@ -113,9 +113,9 @@ h2 {
 
 .detailed-title {
   font-family: 'airstream_nfregular', sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   letter-spacing: 6px;
   position: absolute;
   border: 2px solid lightcoral;
@@ -136,6 +136,7 @@ h2 {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
   }
 
   .gallery {
@@ -143,6 +144,7 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    position: relative;
   }
 
   .gallery--item {
@@ -159,23 +161,47 @@ h2 {
     font-size: 1rem;
   }
 
-.general {
+  .general {
+    position: relative;
 
 
     display: flex;
-      flex-direction: column;
-    }
+    flex-direction: column;
+  }
 }
 
 @media screen and(orientation: landscape) {
   .cloud {
+    position: relative;
     display: flex;
     flex-direction: row;
-    flex-grow: 3;
-    }
-    
-    
+  }
 
+  .gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 100vh;
+    overflow: auto;
+    margin-top: 3%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-around;
+    flex-shrink: 5;
+  }
+
+  .general {
+    position: relative;
+  }
+
+  .mainImage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -190,12 +216,15 @@ h2 {
     letter-spacing: 2px;
     width: 45rem;
     text-align: left;
-    max-height: 30rem;
-      overflow-x: hidden;
-    }
-    
-    body {
-      overflow: hidden;
+    max-height: 5em;
+    overflow: auto;
   }
 
+  body {
+    overflow: hidden;
+}
+
+  .mainImage {
+    position: relative;
+  }
 }
