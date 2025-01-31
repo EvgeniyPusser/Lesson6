@@ -19,7 +19,7 @@ h2 {
 .general {
   display: flex;
   flex-direction: row-reverse;
-  gap: 10%;
+
 }
 
 .cloud {
@@ -27,8 +27,10 @@ h2 {
   margin-right: auto;
   margin-top: 10%;
   position: relative;
-  height: 39rem;
-  width: 43rem;
+  /* height: 39rem;
+                                            width: 43rem; */
+    height: 50vh;
+    width: 300hv;
   display: inline-block;
   align-items: center;
 }
@@ -143,7 +145,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
     position: relative;
   }
 
@@ -175,6 +177,8 @@ h2 {
     position: relative;
     display: flex;
     flex-direction: row;
+    width: 100hv;
+      height: 50hv;
   }
 
   .gallery {
@@ -188,7 +192,7 @@ h2 {
     margin-right: auto;
     margin-left: auto;
     justify-content: space-around;
-    flex-shrink: 5;
+
   }
 
   .general {
@@ -219,12 +223,23 @@ h2 {
     max-height: 5em;
     overflow: auto;
   }
+}
 
+.gallery {
+  max-height: 90vh;
+}
   body {
     overflow: hidden;
-}
+  
 
   .mainImage {
     position: relative;
   }
+}
+.animation-image {
+  animation: zoomIn 3s ease-in-out;
+}
+
+.animation-text {
+  animation: rubberBand 0.5s ease-in-out;
 }

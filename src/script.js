@@ -51,18 +51,27 @@ function setDetails(boxElement) {
 
   if (imageElement) {
     detailedImages.src = imageElement.src;
+  
+    detailedImages.classList.remove("animation-image"); // Remove first
+    void detailedImages.offsetWidth; // Trigger reflow
+    detailedImages.classList.add("animation-image");
   }
 
   if (titleElement) {
     detailedTitle.innerHTML = titleElement.dataset.detailedText;
+  
+    detailedTitle.classList.remove("animation-text"); // Remove first
+    void detailedTitle.offsetWidth; // Trigger reflow
+    detailedTitle.classList.add("animation-text");
   }
-
-  gsap.fromTo(detailedImages, { opacity: 0 }, { opacity: 1, duration: 0.5 });
-    gsap.fromTo(detailedTitle, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });
 }
+  
+
+
 
 boxesElements.forEach((box) => {
   box.addEventListener("click", function () {
     setDetails(box);
+   
   });
 });
