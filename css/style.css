@@ -82,11 +82,12 @@ h2 {
   text-align: center;
 }
 
+
 .gallery--item_image {
   display: block;
   width: 35vh;
     height: 15rem;
-    /* object-fit: cover; */
+  
 }
 
 .gallery--item {
@@ -99,6 +100,7 @@ h2 {
 
 .gallery--item:hover {
   filter: blur(5px);
+  
 }
 
 .logo {
@@ -298,4 +300,12 @@ body {
 
 .animation-text {
   animation: rubberBand 0.5s ease-in-out;
+}
+.animation-image1 {
+  animation: bounce 3s ease-in-out;
+
+}
+
+.animation-text1 {
+  animation: headShake 3s ease-in-out;
 }
