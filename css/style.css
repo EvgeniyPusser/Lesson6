@@ -20,6 +20,7 @@ h2 {
   display: flex;
   flex-direction: row-reverse;
 
+
 }
 
 .cloud {
@@ -27,10 +28,8 @@ h2 {
   margin-right: auto;
   margin-top: 10%;
   position: relative;
-  /* height: 39rem;
-                                            width: 43rem; */
-    height: 50vh;
-    width: 300hv;
+  height: 39rem;
+    width: 43rem;
   display: inline-block;
   align-items: center;
 }
@@ -85,6 +84,9 @@ h2 {
 
 .gallery--item_image {
   display: block;
+  width: 35vh;
+    height: 15rem;
+    /* object-fit: cover; */
 }
 
 .gallery--item {
@@ -136,49 +138,71 @@ h2 {
   .mainImage {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+
   }
 
   .gallery {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
-    position: relative;
+    max-height: 45vh;
+      overflow: scroll;
+      margin-top: 3%;
+    
+      margin-left: auto;
   }
 
   .gallery--item {
-    width: 10rem;
+    width: 12rem;
   }
 
   .gallery--item_image {
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+      height: 12rem;
   }
 
   .gallery--item_title {
-    width: 10rem;
-    font-size: 1rem;
+    width: 12rem;
+      /* font-size: 2rem; */
   }
 
   .general {
     position: relative;
 
-
+    min-height: 100hv;
+      max-height: 100vh;
     display: flex;
     flex-direction: column;
   }
+.detailed-title {
+  bottom: 8%;
+}
 }
 
 @media screen and(orientation: landscape) {
+  .gallery--item_image {
+      width: 35rem;
+      height: 35rem;
+    }
+  
+    .gallery--item_title {
+      width: 35rem;
+      text-align: center;
+    }
+  
+    .gallery--item {
+      width: 39rem;
+    }
   .cloud {
     position: relative;
     display: flex;
     flex-direction: row;
     width: 100hv;
-      height: 50hv;
+    height: 10hv;
   }
 
   .gallery {
@@ -192,6 +216,8 @@ h2 {
     margin-right: auto;
     margin-left: auto;
     justify-content: space-around;
+    font-size: 5 rem;
+      /* width: 35rem; */
 
   }
 
@@ -205,6 +231,8 @@ h2 {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    height: 60vh;
+      width: 100vh;
   }
 }
 
@@ -223,19 +251,47 @@ h2 {
     max-height: 5em;
     overflow: auto;
   }
+.cloud {
+  width: 100vh;
+  height: 60vh;
+
+}
+
+.mainImage {
+  width: 80vh;
+}
+
+.gallery {
+  width: 20rem;
+  font-size: 10rem;
+}
+
+.gallery--item {
+  width: 20rem;
+}
+
+.gallery--item_image {
+  width: 20rem;
+  height: 20rem;
+}
+
+.gallery--item_title {
+  height: 5rem;
+  width: 25rem;
+}
 }
 
 .gallery {
   max-height: 90vh;
 }
-  body {
-    overflow: hidden;
-  
 
+body {
+  overflow: hidden;
   .mainImage {
     position: relative;
   }
 }
+
 .animation-image {
   animation: zoomIn 3s ease-in-out;
 }
