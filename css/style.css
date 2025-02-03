@@ -6,6 +6,7 @@ body {
   background: url(../images/easy-back.svg);
   text-align: center;
   font-size: 2rlh;
+  --size: 40rem;
 }
 
 h2 {
@@ -28,16 +29,16 @@ h2 {
   margin-right: auto;
   margin-top: 10%;
   position: relative;
-  height: 39rem;
-    width: 43rem;
+  height: calc(var(--size) - 1);
+    width: calc(var(--size) + 5);
   display: inline-block;
   align-items: center;
 }
 
 .mainImage {
   position: absolute;
-  height: 32rem;
-  width: 38rem;
+  height: calc(var(--size) - 8);
+    width: var(--size);
   background-color: aqua;
   border: 2px solid gray;
   align-items: center;
@@ -49,14 +50,14 @@ h2 {
   margin-top: auto;
   margin-bottom: auto;
   height: 90%;
-  width: 90%;
+  width: 80%;
   object-fit: cover;
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
 .gallery--item_image {
-  width: 15rem;
-  height: 15rem;
+  width: calc(var(--size) / 2);
+    height: calc(var(--size) / 2);
   object-fit: cover;
 }
 
@@ -76,8 +77,8 @@ h2 {
   font-weight: 600;
   font-style: normal;
   display: block;
-  width: 15rem;
-  font-size: 2rem;
+  width: calc((var(--size) / 2) - 5);
+    font-size: calc(var(--size) / 20);
   background-color: aliceblue;
   text-align: center;
 }
@@ -86,7 +87,7 @@ h2 {
 .gallery--item_image {
   display: block;
   width: 35vh;
-    height: 15rem;
+  height: calc((var(--size) - 10) / 2);
   
 }
 
@@ -94,7 +95,7 @@ h2 {
   border: 2px solid lightgrey;
   border-radius: 40px;
   overflow: hidden;
-  width: 15rem;
+  width: calc((var(--size) - 10) / 2);
   margin-top: 10px;
 }
 
@@ -187,8 +188,8 @@ h2 {
 
 @media screen and(orientation: landscape) {
   .gallery--item_image {
-      width: 35rem;
-      height: 35rem;
+      width: calc(var(--size) - 5);
+        height: calc(var(--size) - 5);
     }
   
     .gallery--item_title {
@@ -199,13 +200,7 @@ h2 {
     .gallery--item {
       width: 39rem;
     }
-  .cloud {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100hv;
-    height: 10hv;
-  }
+
 
   .gallery {
     position: relative;
@@ -236,6 +231,7 @@ h2 {
     height: 60vh;
       width: 100vh;
   }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -273,13 +269,13 @@ h2 {
 }
 
 .gallery--item_image {
-  width: 20rem;
-  height: 20rem;
+  width: calc(var(--size) / 2);
+    height: calc(var(--size) / 2);
 }
 
 .gallery--item_title {
-  height: 5rem;
-  width: 25rem;
+  height: calc(var(--size) / 8);
+    width: calc(var(--size) - 15);
 }
 }
 
